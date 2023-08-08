@@ -20,7 +20,7 @@ class App extends StatelessWidget {
         ),
         cardColor: const Color(0xFFF4EDDB),
       ),
-      home: const Scaffold(
+      home: Scaffold(
         body: Center(
           child: HomeScreen(),
         ),
