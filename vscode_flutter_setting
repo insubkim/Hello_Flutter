@@ -1,0 +1,25 @@
+{
+    "editor.inlineSuggest.enabled": true,
+    "editor.insertSpaces": false,
+    "dart.flutterSdkPath": "/goinfre/inskim/flutter",
+    "terminal.integrated.defaultLocation": "editor",
+    "editor.codeActionsOnSave":{
+        "source.fixAll": true
+    },
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [80],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "editor.formatOnSave": true,
+    "dart.previewFlutterUiGuides": true,
+    "dart.flutterRunAdditionalArgs": [
+        "--web-renderer",
+        "html"
+    ]
+}
