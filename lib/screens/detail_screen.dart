@@ -2,6 +2,7 @@ import 'package:toonflix/models/detail_model.dart';
 import 'package:toonflix/models/webtoon_episode.dart';
 import 'package:toonflix/services/api_service.dart';
 import 'package:flutter/material.dart';
+import 'package:toonflix/widgets/episode.dart';
 
 class DetailScreen extends StatefulWidget {
   final String title;
@@ -46,10 +47,7 @@ class _DetailScreenState extends State<DetailScreen> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 180,
-          vertical: 20,
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 180, vertical: 20),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -125,34 +123,7 @@ class _DetailScreenState extends State<DetailScreen> {
                     return Column(
                       children: [
                         for (var ep in snapshot.data!)
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 10),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              color: Colors.greenAccent,
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 20),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    ep.title,
-                                    style: const TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w400,
-                                    ),
-                                  ),
-                                  const Icon(
-                                    Icons.arrow_right,
-                                    size: 20,
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
+                          Episode(ep: ep, id: widget.id),
                       ],
                     );
                   }
